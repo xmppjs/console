@@ -23,7 +23,7 @@ module.exports = function(flags, endpoint) {
   let prevent = false
 
   let entity
-  if (flags.type === 'compomnent') {
+  if (flags.type === 'component') {
     entity = component.xmpp().component
   } else {
     entity = client.xmpp().client
