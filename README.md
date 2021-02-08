@@ -14,16 +14,19 @@ npm install -g @xmpp/console
 
 ```
 Usage
-  $ xmpp-console [endpoint]
+  $ xmpp-console [service]
 
 Options
   --port, -p 8080 port for the web interface
   --web, -w use web interface
   --no-open, prevents opening the url for the web interface
   --type, -t client (default) or component
+  --username, -u the username for authentication
+  --password, -p the password for authentication
+  --domain, -d the service domain
 
 Examples
-  $ xmpp-console
+  $ xmpp-console localhost (auto)
   $ xmpp-console xmpp://localhost[:5222] (classic XMPP)
   $ xmpp-console xmpps://localhost[:5223] (direct TLS)
   $ xmpp-console ws://localhost:5280/xmpp-websocket (WebSocket)
@@ -44,11 +47,10 @@ The Web interface only supports WebSocket client connection at the moment.
 It is possible to use it locally with `xmpp-console --web` (see [Usage](#usage)) or deploy it with
 
 ```
-$ git clone https://github.com/xmppjs/xmpp.js
-$ cd xmpp.js
-$ make
-$ cd packages/console
-$ make
+$ git clone https://github.com/xmppjs/console.git
+$ cd console
+$ npm install
+$ npm run build
 ```
 
-and use your HTTP server to serve `xmpp.js/packages/console/public/`.
+and use your HTTP server to serve `console/public/`.

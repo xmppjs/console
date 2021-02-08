@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -10,7 +11,8 @@ body {
   /*background-color: '#fdf6e3';*/
 }
 
-#input, #output {
+#input,
+#output {
   width: 100%;
 }
 
@@ -30,9 +32,12 @@ a.token.email-link {
 
 #output {
   flex: 1;
-  /*background-color: #fdf6e3;*/
   flex-direction: column;
   overflow: auto;
+  box-sizing: border-box;
+  padding-left: calc(0.7em + 31px);
+  background-color: #fdf6e3;
+  overflow-y: scroll;
 }
 
 .log-entry {
@@ -59,4 +64,13 @@ a.token.email-link {
   width: 100%;
   height: 300px;
   font-size: 16px;
+  box-shadow: none !important;
+}
+
+#input {
+  border-bottom: solid lightgrey 1px;
+}
+
+input[type="submit"] {
+  border: none;
 }
