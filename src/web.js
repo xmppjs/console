@@ -46,9 +46,7 @@ Prism.plugins.toolbar.registerButton("select", {
   },
 });
 
-function setup(params) {
-  console.log(params);
-
+function setup(params = {}) {
   const client = xmpp({
     credentials: (...args) => xconsole.login(...args, params),
   });

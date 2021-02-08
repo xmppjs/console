@@ -18950,7 +18950,7 @@
     },
   });
 
-  function setup(params) {
+  function setup(params = {}) {
     console.log(params);
 
     const client = client_1({
